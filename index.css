@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-calligraphy: "Great Vibes", cursive;
+  
+  --color-rose-gold: #b76e79;
+  --color-soft-pink: #f4c2c2;
+  --color-gold: #d4af37;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #0a0502;
+  color: #fff;
+  font-family: var(--font-sans);
+}
+
+.neon-glow {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 55px #ff00de, 0 0 75px #ff00de;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.candle-flame {
+  background: radial-gradient(circle at 50% 50%, #fff 0%, #ffeb3b 50%, #ff9800 100%);
+  filter: blur(2px);
+  animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1) rotate(-1deg); opacity: 0.8; }
+  100% { transform: scale(1.1) rotate(1deg); opacity: 1; }
+}
